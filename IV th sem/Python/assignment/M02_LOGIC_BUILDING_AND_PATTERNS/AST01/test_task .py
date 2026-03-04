@@ -1,16 +1,16 @@
 import unittest
-from task.py import even_odd
+from task import isUgly
 
 class TestAssignment(unittest.TestCase):
 
     def test_single_digit(self):
-        self.assertEqual(even_odd(5), "Weird")
+        self.assertEqual(isUgly(6), True)
 
     def test_multiple_digits(self):
-        self.assertEqual(even_odd(25), "Not Weird")
+        self.assertEqual(isUgly(1), True)
 
     def test_with_zero(self):
-        self.assertEqual(even_odd(70), "Not Weird")
+        self.assertEqual(isUgly(14), False)
 
 if __name__ == "__main__":
     unittest.main()
